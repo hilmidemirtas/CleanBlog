@@ -1,5 +1,15 @@
-const fn = function () {
-    console.log("function working")
-};
+const express = require('express');
 
-fn()
+const app = express();
+
+app.get('/', (req, res) => {
+    const blog = { id: 1, title: "Blog title", description: "Blog description" };
+    res.send(blog)
+});
+
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`sunucu ${port}'da başlatıldı..`)
+});
+
