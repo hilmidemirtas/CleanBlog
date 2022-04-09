@@ -4,7 +4,7 @@ const schema = mongoose.Schema;
 
 //Connect
 
-mongoose.connect('mongodb://localhost//CleanBlog');
+mongoose.connect('mongodb://localhost/CleanBlog');
 
 //Create Schema
 
@@ -14,6 +14,11 @@ const PostSchema ({
     dateCreated: Date(default now)
 });
 
-const Photo = mongoose.model('Post', PostSchema)
+const Post = mongoose.model('Post', PostSchema)
 
 //Create a post
+Post.create({
+    title: resim 1,
+    detail: ilk resim,
+    dateCreated: Date(default now)
+})
