@@ -20,3 +20,14 @@ Post.create({
     title: "resim 1",
     detail: "ilk resim",
 })
+
+Post.create({
+    title: "resim 2",
+    detail: "ikinci resim",
+})
+
+Post.create({
+    title: "resim 3",
+    detail: "üçüncü resim",
+})
+
