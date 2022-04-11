@@ -11,6 +11,11 @@ mongoose.connect('mongodb://localhost/CleanBlog');
 const PostSchema = new Schema ({
     title: String,
     detail: String,
+    Image: String,
+    DdateCreated: {
+        type: Date,
+        default: Date.now
+    } 
 });
 
 const Post = mongoose.model('Post', PostSchema)
