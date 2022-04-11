@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
-/* const mongoose = require('mongoose'); */
+const mongoose = require('mongoose');
+const Post = require('./models/Post');
 
 const ejs = require('ejs');
 
 const app = express();
 
 //Connect
-/* mongoose.connect('mongodb://localhost/CleanBlog'); */
+mongoose.connect('mongodb://localhost/CleanBlog'); 
 
 //template
 app.set("view engine", "ejs");
