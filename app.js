@@ -1,9 +1,13 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+
 const ejs = require('ejs');
 
 const app = express();
 
+//Connect
+mongoose.connect('mongodb://localhost/CleanBlog');
 
 //template
 app.set("view engine", "ejs");
@@ -25,6 +29,9 @@ app.get('/about', (req, res) => {
 });
 app.get('/add_post', (req, res) => {
     res.render('add_post')
+});
+app.get('/post', (req, res) => {
+    res.render('post')
 });
 
 
