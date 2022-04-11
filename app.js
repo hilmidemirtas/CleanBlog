@@ -39,9 +39,9 @@ app.get('/post', (req, res) => {
 
 app.post('/pos', (req, res) => {
      
-    console.log(req.body)
+    console.log(req.body);
 
-    /* res.redirect('/') */
+     res.redirect('/');
 });
 
 
