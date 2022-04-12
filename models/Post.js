@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-//Connect
+/* Connect
 
-mongoose.connect('mongodb://localhost/CleanBlog');
+mongoose.connect('mongodb://localhost/CleanBlog'); */
 
 //Create Schema
 
 const PostSchema = new Schema ({
     title: String,
     detail: String,
-    Image: String,
-    DdateCreated: {
+    image: String,
+    dateCreated: {
         type: Date,
         default: Date.now
     } 

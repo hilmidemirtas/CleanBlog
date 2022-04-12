@@ -38,7 +38,7 @@ app.get('/post', (req, res) => {
     res.render('post')
 });
 
-app.post('/pos', (req, res) => {
+app.post('/pos', async (req, res) => {
      
     console.log(req.body);
 
