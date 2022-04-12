@@ -7,7 +7,7 @@ const ejs = require('ejs');
 
 const app = express();
 
-//Connect
+//Connect DB
 mongoose.connect('mongodb://localhost/CleanBlog'); 
 
 //template
@@ -22,8 +22,11 @@ app.use(express.json());
 
 
 //routes
-app.get('/', (req, res) => {
-    res.render('index')
+app.get('/', async (req, res) => {
+    const posts = await Post.find({});
+    res.render('index', {
+        posts
+    })
 });
 app.get('/index', (req, res) => {
     res.render('index')
@@ -40,8 +43,7 @@ app.get('/post', (req, res) => {
 
 app.post('/pos', async (req, res) => {
      
-    console.log(req.body);
-
+   await Post.create(req.body);
      res.redirect('/');
 });
 
