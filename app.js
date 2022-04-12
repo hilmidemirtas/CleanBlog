@@ -28,7 +28,7 @@ app.get('/', async (req, res) => {
         posts
     })
 });
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index')
 });
 app.get('/about', (req, res) => {
